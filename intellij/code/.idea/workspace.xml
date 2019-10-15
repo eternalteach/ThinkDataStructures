@@ -191,7 +191,7 @@
       <workItem from="1570950856658" duration="16000" />
       <workItem from="1570950886228" duration="1547000" />
       <workItem from="1571140304094" duration="31000" />
-      <workItem from="1571140349090" duration="8039000" />
+      <workItem from="1571140349090" duration="8395000" />
     </task>
     <servers />
   </component>
@@ -210,16 +210,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/allendowney/thinkdast/MyArrayListTest.java</url>
-          <line>14</line>
-          <option name="timeStamp" value="3" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

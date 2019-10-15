@@ -190,12 +190,10 @@ public class MyArrayList<T> implements List<T> {
 	@Override
 	public T remove(int index) {
 		// TODO: FILL THIS IN!
-		int length=array.length;
 		T result=array[index];
-		T[] clone=(T[]) new Object[length];
-		System.arraycopy(array,0,clone,0,index);
-		System.arraycopy(array,index+1,clone,index,size-index+1);
-		array=clone;
+		for(int i=index;i<size-1;i++){
+			array[i]=array[i+1];
+		}
 		size--;
 		return result;
 	}
@@ -217,26 +215,9 @@ public class MyArrayList<T> implements List<T> {
 	@Override
 	public T set(int index, T element) {
 		// TODO: FILL THIS IN!
-		if(array.length<=index||index<0){
-			throw new IndexOutOfBoundsException();
-		}
-		if(element==null){
-			throw new NullPointerException();
-		}
-		int length=array.length;
-		T result=array[index];
-		// 먼저 기존 데이터 복사
-		T[] clone = (T[])new Object[length];
-		System.arraycopy(array,0,clone,0,length);
-		//array를 새로운 빈 객체로 생성
-		array = (T[])new Object[array.length];
-		// index 앞 까지 복사
-		System.arraycopy(clone,0,array,0,index);
-		// index 대체
-		add(index,element); size--;
-		// index 뒤부터 남은 배열 복사
-		System.arraycopy(clone,index+1,array,index+1,size-index-1);
-		return result;
+		T old = get(index);
+		array[index] = element;
+		return old;
 	}
 
 	@Override
