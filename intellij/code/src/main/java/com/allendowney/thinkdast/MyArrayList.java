@@ -190,7 +190,14 @@ public class MyArrayList<T> implements List<T> {
 	@Override
 	public T remove(int index) {
 		// TODO: FILL THIS IN!
-		return null;
+		int length=array.length;
+		T result=array[index];
+		T[] clone=(T[]) new Object[length];
+		System.arraycopy(array,0,clone,0,index);
+		System.arraycopy(array,index+1,clone,index,size-index+1);
+		array=clone;
+		size--;
+		return result;
 	}
 
 	@Override
@@ -228,7 +235,7 @@ public class MyArrayList<T> implements List<T> {
 		// index 대체
 		add(index,element); size--;
 		// index 뒤부터 남은 배열 복사
-		System.arraycopy(clone,index+1,array,index+1,array.length-index-1);
+		System.arraycopy(clone,index+1,array,index+1,size-index-1);
 		return result;
 	}
 

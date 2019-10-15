@@ -71,22 +71,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ListClientExampleTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="code_main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.allendowney.thinkdast.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.allendowney.thinkdast" />
-      <option name="MAIN_CLASS_NAME" value="com.allendowney.thinkdast.ListClientExampleTest" />
-      <option name="TEST_OBJECT" value="class" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="MyArrayListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="code.main" />
       <extension name="coverage">
@@ -114,6 +98,23 @@
       <option name="PACKAGE_NAME" value="com.allendowney.thinkdast" />
       <option name="MAIN_CLASS_NAME" value="com.allendowney.thinkdast.MyArrayListTest" />
       <option name="METHOD_NAME" value="testIndexOfNull" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="MyArrayListTest.testRemoveObject" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="code.main" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.allendowney.thinkdast.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.allendowney.thinkdast" />
+      <option name="MAIN_CLASS_NAME" value="com.allendowney.thinkdast.MyArrayListTest" />
+      <option name="METHOD_NAME" value="testRemoveObject" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
       <method v="2">
@@ -155,18 +156,18 @@
     </configuration>
     <list>
       <item itemvalue="Application.MyArrayList" />
-      <item itemvalue="JUnit.ListClientExampleTest" />
       <item itemvalue="JUnit.MyArrayListTest" />
       <item itemvalue="JUnit.MyArrayListTest.testSet" />
       <item itemvalue="JUnit.MyArrayListTest.testIndexOfNull" />
+      <item itemvalue="JUnit.MyArrayListTest.testRemoveObject" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.MyArrayListTest" />
+        <item itemvalue="JUnit.MyArrayListTest.testRemoveObject" />
         <item itemvalue="JUnit.MyArrayListTest.testIndexOfNull" />
         <item itemvalue="JUnit.MyArrayListTest.testSet" />
         <item itemvalue="Application.MyArrayList" />
-        <item itemvalue="JUnit.ListClientExampleTest" />
       </list>
     </recent_temporary>
   </component>
@@ -190,7 +191,7 @@
       <workItem from="1570950856658" duration="16000" />
       <workItem from="1570950886228" duration="1547000" />
       <workItem from="1571140304094" duration="31000" />
-      <workItem from="1571140349090" duration="7565000" />
+      <workItem from="1571140349090" duration="8039000" />
     </task>
     <servers />
   </component>
