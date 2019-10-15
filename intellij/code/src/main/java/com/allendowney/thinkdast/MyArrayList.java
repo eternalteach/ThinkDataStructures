@@ -120,7 +120,7 @@ public class MyArrayList<T> implements List<T> {
 		// TODO: FILL THIS IN!
 
 		for(int index=0;index<size;index++){
-			if(get(index)==target){
+			if(equals(get(index),(target))){
 				return index;
 			}
 		}
