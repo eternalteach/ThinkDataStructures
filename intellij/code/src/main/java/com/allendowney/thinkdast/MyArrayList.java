@@ -118,6 +118,13 @@ public class MyArrayList<T> implements List<T> {
 	@Override
 	public int indexOf(Object target) {
 		// TODO: FILL THIS IN!
+
+		for(int index=0;index<size;index++){
+			if(get(index)==target){
+				return index;
+			}
+		}
+
 		return -1;
 	}
 
