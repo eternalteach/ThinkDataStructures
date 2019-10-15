@@ -44,8 +44,15 @@ public class MyArrayList<T> implements List<T> {
 
 	@Override
 	public boolean add(T element) {
-		// TODO: FILL THIS IN!
-		return false;
+		if(size>=array.length){
+			// 큰 배열을 만들고 요소들을 복사한다.
+			T[] bigger = (T[]) new Object[array.length*2];
+			System.arraycopy(array,0,bigger,0,array.length);
+			array=bigger;
+		}
+		array[size]=element;
+		size++;
+		return true;
 	}
 
 	@Override
@@ -114,13 +121,7 @@ public class MyArrayList<T> implements List<T> {
 		return -1;
 	}
 
-	/** Checks whether an element of the array is the target.
-	 *
-	 * Handles the special case that the target is null.
-	 *
-	 * @param target
-	 * @param object
-	 */
+
 	private boolean equals(Object target, Object element) {
 		if (target == null) {
 			return element == null;
@@ -202,7 +203,26 @@ public class MyArrayList<T> implements List<T> {
 	@Override
 	public T set(int index, T element) {
 		// TODO: FILL THIS IN!
-		return null;
+		if(array.length<=index||index<0){
+			throw new IndexOutOfBoundsException();
+		}
+		if(element==null){
+			throw new NullPointerException();
+		}
+		int length=array.length;
+		T result=array[index];
+		// 먼저 기존 데이터 복사
+		T[] clone = (T[])new Object[length];
+		System.arraycopy(array,0,clone,0,length);
+		//array를 새로운 빈 객체로 생성
+		array = (T[])new Object[array.length];
+		// index 앞 까지 복사
+		System.arraycopy(clone,0,array,0,index);
+		// index 대체
+		add(index,element); size--;
+		// index 뒤부터 남은 배열 복사
+		System.arraycopy(clone,index+1,array,index+1,array.length-index-1);
+		return result;
 	}
 
 	@Override

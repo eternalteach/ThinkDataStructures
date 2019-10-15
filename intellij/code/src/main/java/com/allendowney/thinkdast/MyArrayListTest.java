@@ -12,10 +12,6 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-/**
- * @author downey
- *
- */
 public class MyArrayListTest {
 
 	protected List<Integer> mylist;
