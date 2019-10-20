@@ -93,7 +93,7 @@ public class MyLinkedList<E> implements List<E> {
         // index 번째 노드를 새로 삽입하는 노드로 교체해야 한다.
         // index 번째 노드의 next값을 기존 index번째 노드로 해야 한다.
         if (index == size) {
-			add(element);
+            add(element);
         } else if (index != 0) {
             Node indexNode = getNode(index);
             Node indexFrontNode = getNode(index - 1);
@@ -169,11 +169,11 @@ public class MyLinkedList<E> implements List<E> {
     @Override
     public int indexOf(Object target) {
         //TODO: FILL THIS IN!
-		for(int index=0; index<size; index++){
-			if(equals(getNode(index).data,target)){
-				return index;
-			}
-		}
+        for (int index = 0; index < size; index++) {
+            if (equals(getNode(index).data, target)) {
+                return index;
+            }
+        }
         return -1;
     }
 
@@ -233,7 +233,29 @@ public class MyLinkedList<E> implements List<E> {
     @Override
     public E remove(int index) {
         //TODO: FILL THIS IN!
-        return null;
+        Node removeNode = getNode(index);
+        if (index == 0) {
+        	// 첫 노드 삭제
+            if (size > 1) {
+                head = getNode(index + 1);
+            } else {
+                head = null;
+            }
+        } else {
+            //마지막 노드 삭제
+            if (size - 1 == index) {
+                if (size > 2) {
+                    getNode(index - 1).next = null;
+                } else {
+                    head = null;
+                }
+            } else{
+            	// 중간 노드 삭제
+				getNode(index-1).next=getNode(index+1);
+			}
+        }
+        size--;
+        return removeNode.data;
     }
 
     @Override
