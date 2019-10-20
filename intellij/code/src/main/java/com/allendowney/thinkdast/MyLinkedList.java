@@ -169,6 +169,11 @@ public class MyLinkedList<E> implements List<E> {
     @Override
     public int indexOf(Object target) {
         //TODO: FILL THIS IN!
+		for(int index=0; index<size; index++){
+			if(equals(getNode(index).data,target)){
+				return index;
+			}
+		}
         return -1;
     }
 
